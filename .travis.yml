@@ -13,3 +13,10 @@ after_success:
   - docker build -t humberto24/multi-nginx ./nginx
   - docker build -t humberto24/multi-server ./server
   - docker build -t humberto24/multi-worker ./worker
+  # Log in to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take those images and push them to ducker hub
+  - docker push humberto24/multi-client
+  - docker push humberto24/multi-nginx
+  - docker push humberto24/multi-server
+  - docker push humberto24/multi-worker
