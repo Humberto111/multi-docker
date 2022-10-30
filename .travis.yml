@@ -22,3 +22,4 @@ after_success:
   - docker push humberto24/multi-nginx
   - docker push humberto24/multi-server
   - docker push humberto24/multi-worker
+  # comment
