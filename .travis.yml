@@ -10,6 +10,9 @@ before_install:
 script:
   - docker run -e CI=true humberto24/react-test npm test
 
+git:
+  symlinks: true
+
 after_success:
   - docker build -t humberto24/multi-client ./client
   - docker build -t humberto24/multi-nginx ./nginx
