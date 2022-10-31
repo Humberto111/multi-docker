@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t humberto24/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t humberto24/react-test -f C:\Users\humbe\OneDrive\Documentos\Docker\complex\client\Dockerfile.dev C:\Users\humbe\OneDrive\Documentos\Docker\complex\client\Dockerfile.dev
 
 script:
   - docker run -e CI=true humberto24/react-test npm test
